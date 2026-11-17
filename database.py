@@ -19,7 +19,7 @@ def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
 
 
-# Provide a database session
+# Provide a database session for api requests
 def get_session():
     with Session(engine) as session:
         yield session
